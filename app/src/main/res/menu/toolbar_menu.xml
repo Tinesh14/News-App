@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.activities.TransactionSearchActivity">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:iconTint="@color/white"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/overflowMenu"
+        android:icon="@drawable/outline_filter_alt_24"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/business"
+                android:title="Business"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/entertainment"
+                android:title="Entertainment"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/health"
+                android:title="Health"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/science"
+                android:title="Science"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/sports"
+                android:title="Sports"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/technology"
+                android:title="Technology"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>
