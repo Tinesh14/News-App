@@ -25,7 +25,6 @@ import com.example.myapplication.ui.main.MainViewModel
 import com.example.myapplication.utils.Constants
 import com.example.myapplication.utils.Constants.Companion.QUERY_PER_PAGE
 import com.example.myapplication.utils.EndlessRecyclerOnScrollListener
-//import com.example.myapplication.utils.EspressoIdlingResource
 import kotlinx.coroutines.flow.collect
 
 class FeedFragment : BaseFragment<FragmentFeedBinding>() {
@@ -106,7 +105,6 @@ class FeedFragment : BaseFragment<FragmentFeedBinding>() {
                             hideProgressBar()
                             hideErrorMessage()
                             response.data?.let { newResponse ->
-//                                EspressoIdlingResource.decrement()
                                 newsAdapter.differ.submitList(newResponse.articles.toList())
                                 mainViewModel.totalPage =
                                     newResponse.totalResults / QUERY_PER_PAGE + 1
@@ -155,7 +153,6 @@ class FeedFragment : BaseFragment<FragmentFeedBinding>() {
                             hideProgressBar()
                             hideErrorMessage()
                             response.data?.let { searchResponse ->
-//                                EspressoIdlingResource.decrement()
                                 newsAdapter.differ.submitList(searchResponse.articles.toList())
                                 mainViewModel.totalPage =
                                     searchResponse.totalResults / QUERY_PER_PAGE + 1

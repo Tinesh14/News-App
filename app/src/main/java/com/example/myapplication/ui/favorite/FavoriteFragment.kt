@@ -13,7 +13,6 @@ import com.example.myapplication.databinding.FragmentFavoritesBinding
 import com.example.myapplication.ui.adapter.NewsAdapter
 import com.example.myapplication.ui.main.MainActivity
 import com.example.myapplication.ui.main.MainViewModel
-//import com.example.myapplication.utils.EspressoIdlingResource
 class FavoriteFragment : BaseFragment<FragmentFavoritesBinding>() {
 
     override fun setBinding(): FragmentFavoritesBinding =
@@ -39,7 +38,6 @@ class FavoriteFragment : BaseFragment<FragmentFavoritesBinding>() {
     }
 
     private fun setupUI(view: View) {
-//        EspressoIdlingResource.increment()
         newsAdapter.setOnItemClickListener {
             val bundle = Bundle().apply {
                 putSerializable("news", it)
@@ -84,7 +82,6 @@ class FavoriteFragment : BaseFragment<FragmentFavoritesBinding>() {
 
     private fun setupObserver() {
         viewModel.getFavoriteNews().observe(viewLifecycleOwner) { news ->
-//            EspressoIdlingResource.decrement()
             newsAdapter.differ.submitList(news)
         }
     }

@@ -37,15 +37,15 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>() {
         }
 
 
-//        binding.fab.setOnClickListener {
-//            viewModel.saveNews(news)
-//            Snackbar.make(view, "News article added to favorites.", Snackbar.LENGTH_SHORT).show()
-//        }
+        binding.fab.setOnClickListener {
+            viewModel.saveNews(news)
+            Snackbar.make(view, "News article added to favorites.", Snackbar.LENGTH_SHORT).show()
+        }
     }
 
-//    private fun setupObserver() {
-//        viewModel.getFavoriteNews().observe(viewLifecycleOwner) { news ->
-//            binding.fab.isGone = news.any { it.title == args.news.title }
-//        }
-//    }
+    private fun setupObserver() {
+        viewModel.getFavoriteNews().observe(viewLifecycleOwner) { news ->
+            binding.fab.isGone = news.any { it.title == args.news.title }
+        }
+    }
 }
